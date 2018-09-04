@@ -5,8 +5,8 @@ ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# GEM FOR POSTGRES
+gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -37,6 +37,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 3.7'
+  #https://github.com/thoughtbot/factory_bot_rails
+  gem "factory_bot_rails", "~> 4.0"
 end
 
 group :development do
@@ -58,3 +61,20 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+#https://github.com/stympy/faker
+gem 'faker'
+#https://github.com/bokmann/font-awesome-rails
+gem 'font-awesome-rails'
+#https://github.com/rails/jquery-rails
+gem 'jquery-rails'
+#https://github.com/plataformatec/simple_form
+gem 'simple_form'
+#https://github.com/svenfuchs/rails-i18n
+gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
+#https://github.com/kaminari/kaminari
+gem 'kaminari' #for paginate
+#https://github.com/activerecord-hackery/ransack
+gem 'ransack' #For Search
+#https://github.com/jquery-ui-rails/jquery-ui-rails
+gem 'jquery-ui-rails'
+gem "cocoon"
