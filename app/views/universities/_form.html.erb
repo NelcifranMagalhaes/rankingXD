@@ -1,0 +1,66 @@
+
+<%= simple_form_for(@university) do |f| %>
+<% if f.error_notification.present?%>
+	<article class="message is-danger">
+	  <div class="message-header">
+	  </div>
+	  <div class="message-body">
+	    <%= f.error_notification %>
+	    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+	  </div>
+	</article>
+<% end %>
+
+<div class="box">
+	<div class="field is-horizontal">
+		<div class="field-body">
+			<div class="field">
+				<label class="label">Nome</label>
+				<div class="control">
+					<%= f.input :name,label: false ,input_html: {class: 'input'}%>
+				</div>
+			</div>
+			<div class="field">
+				<label class="label">Nota Geral</label>
+				<div class="control">
+					<%= f.input :geral_rate,label: false ,input_html: {class: 'input'}%>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<br>
+    <article class="message is-dark">
+      <div class="message-header">
+        <p>Cursos</p>
+      </div>
+     </article>
+
+    <div id ="courses">
+      <%= f.simple_fields_for :courses do |c| %>
+        <%= render 'course_fields', f: c %>
+      <% end %>
+    </div>
+    <div class="links">
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <%= link_to_add_association '+Cursos', f, :courses,class: "button is-success"%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<br>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <%= f.button :submit,class: "button is-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

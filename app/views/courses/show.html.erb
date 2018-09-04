@@ -1,0 +1,27 @@
+
+<p id="notice"><%= notice %></p>
+
+<div class="box">
+  <h1 class="title"><%= @course.name %></h1>
+  
+	  <div class="tile is-ancestor">
+	    <div class="tile is-vertical is-8">
+	      <div class="tile">
+		      <div class="tile is-parent is-vertical">
+		        <div class="tile is-parent">
+		          <article class="tile is-child notification is-success">
+		            <p class="title"><%= @course.name%></p>
+		              <p class="subtitle">Nota: <%= @course.rate %></p>
+		              <p class="subtitle">Média dos alunos: <%= @course.average_students %></p>
+		          </article>
+		        </div>
+		      </div>
+	      </div>
+	    </div>
+	  </div>
+
+  <footer class="card-footer">
+    <%= link_to 'Voltar', courses_path,class: "card-footer-item"%>
+  </footer>
+
+</div>

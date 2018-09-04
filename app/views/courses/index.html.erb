@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<article class="message is-dark">
+  <div class="message-header">
+    <p>Cursos</p>
+  </div>
+ </article> 
+
+<table class="table is-narrow">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Nota</th>
+      <th>Média</th>
+      <th>Universidade</th>
+      <th>Nota Geral</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+        <td><%= course.name %></td>
+        <td><%= course.rate %></td>
+        <td><%= course.average_students %></td>
+        <td><%= course.university.name %></td>
+        <td><%= course.university.geral_rate %></td>
+        <td>
+          <%= link_to course, data: { toggle: 'tooltip', placement: 'top', title: 'Visualizar' }, class: 'button is-primary' do %>
+            <i class="fa fa-eye"></i>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

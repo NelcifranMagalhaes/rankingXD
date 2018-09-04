@@ -1,15 +1,65 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="pt-br">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RankingXD</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= favicon_link_tag 'uni.ico', :rel => 'shortcut icon' %>
   </head>
-
+  
   <body>
-    <%= yield %>
+    <nav class="navbar">
+         <div class="container">
+             <div class="navbar-brand">
+                <%= link_to courses_path,class: "navbar-item" do%>
+                      Rank XD
+                    <% end %>
+
+                    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                      <span aria-hidden="true"></span>
+                      <span aria-hidden="true"></span>
+                      <span aria-hidden="true"></span>
+                    </a>
+             </div>
+             <div class="navbar-menu" id="navMenu">
+                 <div class="navbar-end">
+                    <%= link_to("Universidades", universities_path ,class: "navbar-item") %>
+                 </div>
+             </div>
+         </div>
+    </nav>
+
+    <div class="container">
+        <div id="flow">
+            <span class="flow-1"></span>
+            <span class="flow-2"></span>
+            <span class="flow-3"></span>
+        </div>
+        <div class="section">
+              <%= yield %>
+      </div>
+    </div>
+
   </body>
 </html>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+  // Check for click events on the navbar burger icon
+  $(".navbar-burger").click(function() {
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      $(".navbar-burger").toggleClass("is-active");
+      $(".navbar-menu").toggleClass("is-active");
+
+  });
+});
+
+</script>

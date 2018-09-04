@@ -1,0 +1,39 @@
+<div class="nested-fields">
+	<div class="tile is-parent">
+		<div class="tile is-child box">
+			<div class="field is-horizontal">
+				<div class="field-body">
+
+					<div class="field">
+						<label class="label">Nome do curso</label>
+						<div class="control">
+							<%= f.input :name,label: false ,input_html: {class: 'input'}%>
+						</div>
+					</div>
+
+					<div class="field">
+						<label class="label">Nota do curso</label>
+						<div class="control">
+							<%= f.input :rate,label: false ,input_html: {class: 'input'}%>
+						</div>
+					</div>
+
+					<div class="field">
+						<label class="label">Média das Notas dos Alunos</label>
+						<div class="control">
+							<%= f.input :average_students,label: false ,input_html: {class: 'input'}%>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="field is-grouped is-grouped-right">
+			  <p class="control">
+				<%= link_to_remove_association "remover Curso", f ,class: "button is-danger"%>   
+			  </p>
+			</div>
+			
+			<br>
+		</div>
+	</div>
+</div>

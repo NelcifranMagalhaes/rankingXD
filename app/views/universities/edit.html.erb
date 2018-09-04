@@ -1,0 +1,17 @@
+<article class="message is-dark">
+  <div class="message-header">
+    <p>Editando Universidade</p>
+  </div>
+ </article> 
+
+<%= render 'form', university: @university %>
+<br>
+<div class="field is-grouped">
+  <p class="control">
+  	<%= link_to 'Mostrar', @university ,class: "button is-link"%>
+  </p>
+  <p class="control">
+	<%= link_to 'Voltar', universities_path, class: "button"%>
+  </p>
+
+</div>

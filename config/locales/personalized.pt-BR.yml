@@ -1,0 +1,30 @@
+# encoding: UTF-8
+pt-BR:
+  activerecord:
+    models:
+      university: Universidade
+      course: Curso
+    attributes:  
+      university:
+        name: Nome
+        geral_rate: Nota Geral
+      course:
+        name: Nome
+        rate: Nota do Curso
+        average_students: Média das Notas dos Alunos
+        university: Universidade
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "Nenhum %{entry_name} encontrado(a)"
+          one: "Exibindo <b>1</b> %{entry_name}"
+          other: "Exibindo <b>%{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Exibindo %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> de <b>%{total}</b> no total"

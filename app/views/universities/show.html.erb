@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<div class="box">
+  <h1 class="title"><%= @university.name %></h1>
+  
+  <% @university.courses.each do |course| %>
+	  <div class="tile is-ancestor">
+	    <div class="tile is-vertical is-8">
+	      <div class="tile">
+		      <div class="tile is-parent is-vertical">
+		        <div class="tile is-parent">
+		          <article class="tile is-child notification is-success">
+		            <p class="title"><%= course.name %></p>
+		              <p class="subtitle">Nota: <%= course.rate %></p>
+		              <p class="subtitle">Média dos alunos: <%= course.average_students %></p>
+		          </article>
+		        </div>
+		      </div>
+	      </div>
+	    </div>
+	  </div>
+<% end %>
+
+  <footer class="card-footer">
+    <%= link_to 'Editar', edit_university_path(@university),class: "card-footer-item" %>
+    <%= link_to 'Voltar', universities_path,class: "card-footer-item"%>
+  </footer>
+
+</div>

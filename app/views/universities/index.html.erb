@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<article class="message is-dark">
+  <div class="message-header">
+    <p>Universidades</p>
+  </div>
+ </article> 
+
+<table class="table is-narrow">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Nota Geral</th>
+      <th colspan="3">Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @universities.each do |university| %>
+      <tr>
+        <td><%= university.name %></td>
+        <td><%= university.geral_rate %></td>
+        <td>
+            <%= render 'shared/action_links', object: university %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Adicionar uma Nova Universidade', new_university_path ,class: "button is-info" %>
