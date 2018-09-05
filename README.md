@@ -1,24 +1,42 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# RankingXD
+> See score of university and courses.
 
-Things you may want to cover:
+An application web for see score of educational institutions.
 
-* Ruby version
+## Installation
 
-* System dependencies
+Windows & Linux:
 
-* Configuration
+```sh
+git clone or download the project
+```
 
-* Database creation
+## Development setup
+ * After download project, install ruby in your computer in [@Ruby](https://www.ruby-lang.org/en/).
+ * Install gem bundle
+ * Turn the commands below :
 
-* Database initialization
+```sh
+bundle install
+rails db:create
+rails db:migrate
+rails db:seed #optional
+rails s
+```
 
-* How to run the test suite
+Remember of delete the database before run **rails db:seed** .
 
-* Services (job queues, cache servers, search engines, etc.)
+## Used Technologies
 
-* Deployment instructions
+* [@Rails](https://rubyonrails.org/) as web framework.
+* [@BulmaCss](https://bulma.io/) in front end.
+* In back end, [@Ruby](https://www.ruby-lang.org/en/).
+* Gems
 
-* ...
+## Meta
+Nelcifran Magalhaes – [@Linkedin](https://www.linkedin.com/in/nelcifranpires/
+) – nelcifranpires@gmail.com
+
+##Aplicativo em produção
+[@rankingXD](https://lojameta.herokuapp.com/users/sign_in)
