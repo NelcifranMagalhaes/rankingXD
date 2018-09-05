@@ -2,7 +2,7 @@
 # RankingXD
 > See score of university and courses.
 
-An application web for see score of educational institutions.
+An application web for see scores of educational institutions.
 
 ## Installation
 
