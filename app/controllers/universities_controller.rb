@@ -4,7 +4,8 @@ class UniversitiesController < ApplicationController
   # GET /universities
   # GET /universities.json
   def index
-    @universities = University.all
+    @q = University.ransack(params[:q])
+    @universities = @q.result.order(geral_rate: :desc).page(params[:page]).per(5)
   end
 
   # GET /universities/1

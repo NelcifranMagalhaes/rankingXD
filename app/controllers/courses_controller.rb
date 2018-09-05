@@ -3,9 +3,9 @@ class CoursesController < ApplicationController
 
 
   def index
-    @courses = Course.all
+    @q = Course.ransack(params[:q])
+    @courses = @q.result.order(rate: :desc).page(params[:page]).per(10)
   end
-
 
   def show
   end

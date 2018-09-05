@@ -5,7 +5,70 @@
   </div>
  </article> 
 
-<table class="table is-narrow">
+
+ <div class="box">
+  <div class="field is-horizontal">
+    <%= search_form_for @q do |f| %>
+
+    <div class="field-body">
+      <div class="field">
+        <label class="label">Nome</label>
+        <div class="control">
+          <%= f.search_field :name_cont,label: false ,class: 'input'%>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Nota</label>
+        <div class="control">
+          <%= f.search_field :rate_eq,label: false ,class: 'input'%>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Média dos alunos</label>
+        <div class="control">
+          <%= f.search_field :average_students_eq,label: false ,class: 'input'%>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="field-body">
+      <div class="field">
+        <label class="label">Universidade</label>
+        <div class="control">
+          <%= f.search_field :university_name_cont,label: false ,class: 'input'%>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Nota Geral da Universidade</label>
+        <div class="control">
+          <%= f.search_field :university_geral_rate_eq,label: false ,class: 'input'%>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <%= f.submit class: "button is-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <br>
+ <div class="box">
+
+ <div class="columns is-gapless is-multiline is-mobile">
+   <%= paginate @courses %>
+ </div>
+</div>
+<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
   <thead>
     <tr>
       <th>Nome</th>

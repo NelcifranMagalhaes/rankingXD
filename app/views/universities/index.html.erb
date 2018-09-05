@@ -5,6 +5,46 @@
   </div>
  </article> 
 
+  <div class="box">
+   <div class="field is-horizontal">
+     <%= search_form_for @q do |f| %>
+
+     <div class="field-body">
+       <div class="field">
+         <label class="label">Nome</label>
+         <div class="control">
+           <%= f.search_field :name_cont,label: false ,class: 'input'%>
+         </div>
+       </div>
+       <div class="field">
+         <label class="label">Nota Geral</label>
+         <div class="control">
+           <%= f.search_field :geral_rate_eq,label: false ,class: 'input'%>
+         </div>
+       </div>
+     </div>
+     <br>
+   </div>
+ </div>
+
+   <div class="field is-horizontal">
+     <div class="field-body">
+       <div class="field">
+         <div class="control">
+           <%= f.submit class: "button is-primary" %>
+         </div>
+       </div>
+     </div>
+   </div>
+  <% end %>
+<br>
+
+  <div class="box">
+    <div class="columns is-gapless is-multiline is-mobile">
+      <%= paginate @universities %>
+    </div>
+ </div>
+
 <table class="table is-narrow">
   <thead>
     <tr>
