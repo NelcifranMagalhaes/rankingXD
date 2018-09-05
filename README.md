@@ -43,5 +43,6 @@ Remember of delete the database before run **rails db:seed** .
 Nelcifran Magalhaes – [Linkedin](https://www.linkedin.com/in/nelcifranpires/
 ) – nelcifranpires@gmail.com
 
-##Aplicativo em produção
+## App in production
+
 [rankingXD](https://rankingxd.herokuapp.com)
