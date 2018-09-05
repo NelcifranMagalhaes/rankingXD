@@ -1,4 +1,10 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present? %>
+  <article class="message is-success">
+    <div id="notice" class="message-body">
+     <%= notice %>
+    </div>
+  </article>
+<% end %>
 
 <div class="box">
   <h1 class="title"><%= @university.name %></h1>

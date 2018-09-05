@@ -29,7 +29,16 @@
              </div>
              <div class="navbar-menu" id="navMenu">
                  <div class="navbar-end">
-                    <%= link_to("Universidades", universities_path ,class: "navbar-item") %>
+                  <div class="navbar-item">
+                    <div class="field is-grouped">
+                      <p class="control">
+                        <%= link_to("Universidades", universities_path ,class: "bd-tw-button button") %>
+                      </p>
+                      <p class="control">
+                        <%= link_to("Cursos", courses_path ,class: "bd-tw-button button") %>
+                      </p>
+                    </div>
+                  </div>
                  </div>
              </div>
          </div>
@@ -49,17 +58,3 @@
   </body>
 </html>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-
-  // Check for click events on the navbar burger icon
-  $(".navbar-burger").click(function() {
-
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
-
-  });
-});
-
-</script>

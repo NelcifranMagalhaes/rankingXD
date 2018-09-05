@@ -1,4 +1,11 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present? %>
+  <article class="message is-success">
+    <div id="notice" class="message-body">
+     <%= notice %>
+    </div>
+  </article>
+<% end %>
+
 <article class="message is-dark">
   <div class="message-header">
     <p>Cursos</p>
@@ -12,7 +19,7 @@
 
     <div class="field-body">
       <div class="field">
-        <label class="label">Nome</label>
+        <label class="label">Nome do Curso</label>
         <div class="control">
           <%= f.search_field :name_cont,label: false ,class: 'input'%>
         </div>
